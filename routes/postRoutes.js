@@ -23,10 +23,10 @@ router.get("/:id", getPostById);
 
 // updatePostById
 // http://localhost:5000/api/v1/posts/:id
-router.put("/:id", updatePostById);
+router.put("/:id", auth, updatePostById);
 
 // deletePostById
 // http://localhost:5000/api/v1/posts/:id
-router.delete("/:id", deletePostById);
+router.delete("/:id", auth, deletePostById);
 
 export default router;
