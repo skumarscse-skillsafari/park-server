@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
     if (err)
       return res
         .status(401)
-        .json({ success: false, message: "Unauthorized User" });
+        .json({ success: false, message: "Unauthorized User or Login first" });
     next();
   });
 };
